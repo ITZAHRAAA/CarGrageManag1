@@ -7,6 +7,8 @@ module.exports = {
         kode: ["'Kode Mono'", "monospace"],
         orbitron: ["'Orbitron'", "sans-serif"],
         asimovian: ["'Asimovian'", "sans-serif"],
+        bitter: ["Bitter", "serif"],
+
       },
     },
   },

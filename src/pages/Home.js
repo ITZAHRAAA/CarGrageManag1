@@ -188,7 +188,7 @@ export default function Home({ cars = [] }) {
         {/* Upcoming Services Section */}
         <section className="bg-white/80 backdrop-blur-sm border border-white rounded-2xl p-8 shadow-lg">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-            <CalendarIcon className="w-8 h-8 text-white mr-3" />
+            <CalendarIcon className="w-8 h-8 text-black mr-3" />
             Upcoming services (7 days)
           </h3>
           {upcoming.length === 0 ? (

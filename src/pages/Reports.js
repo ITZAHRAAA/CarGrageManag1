@@ -8,7 +8,7 @@ export default function Reports({ cars }) {
   };
 
   const pieData = [{ name:'Ready', value: stats.ready }, { name:'In Repair', value: stats.repair }];
-  const COLORS = ['#22c55e','#ef4444'];
+  const COLORS = ['#787883ff','#281dc2ff'];
 
   const byYearObj = cars.reduce((acc,c)=>{ acc[c.year] = (acc[c.year]||0)+1; return acc; }, {});
   const barData = Object.entries(byYearObj).map(([year,count])=>({ year, count }));

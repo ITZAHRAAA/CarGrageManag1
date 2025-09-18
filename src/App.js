@@ -6,7 +6,7 @@ import Cars from "./pages/Cars";
 import AddCar from "./pages/AddCar";
 import EditCar from "./pages/EditCar";
 import Reports from "./pages/Reports";
-import History from "./pages/History";
+import Services from "./pages/Services";
 import Toasts from "./components/Toasts";
 
 <div className="bg-blue-500 text-white p-4">
@@ -73,7 +73,7 @@ function App() {
           <Route path="/add" element={<AddCar onAdd={addCar} />} />
           <Route path="/edit/:id" element={<EditCar cars={cars} onUpdate={updateCar} />} />
           <Route path="/reports" element={<Reports cars={cars} />} />
-          <Route path="/history" element={<History cars={cars} />} />
+          <Route path="/services" element={<Services cars={cars} />} />
           
 
         </Routes>

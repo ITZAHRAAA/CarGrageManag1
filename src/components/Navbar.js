@@ -16,13 +16,13 @@ export default function Navbar() {
     </svg>
   );
   const navbarStyles = {
-    header: "bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50",
+    header: "bg-white border-b border-gray-100 sticky top-0 z-50",
     container: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
     wrapper: "flex justify-between items-center h-16",
     
     // Brand section
     brand: "flex items-center space-x-3 ml-4",
-    logo: "w-24 h-26 object-contain flex-shrink-0",
+    logo: "w-16 h-24 object-contain flex-shrink-0",
     brandText: "flex flex-col",
     brandTitle: "text-black text-xl font-black leading-tight font-kode",
     brandSubtitle: "text-gray-600 text-xs leading-tight",
@@ -62,7 +62,7 @@ export default function Navbar() {
                 Car Garage
               </div>
               <div className={navbarStyles.brandSubtitle}>
-                Management System
+                Repair & Maintenance
               </div>
             </div>
           </div>
@@ -91,8 +91,8 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/history" className={getLinkClassName}>
-                  History
+                <NavLink to="/services" className={getLinkClassName}>
+                  Services
                 </NavLink>
               </li>
             </ul>
