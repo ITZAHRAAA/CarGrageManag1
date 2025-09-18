@@ -9,6 +9,10 @@ import Reports from "./pages/Reports";
 import History from "./pages/History";
 import Toasts from "./components/Toasts";
 
+<div className="bg-blue-500 text-white p-4">
+  Tailwind يعمل!
+</div>
+
 const STORAGE_KEY = "cars_v1";
 
 function App() {
