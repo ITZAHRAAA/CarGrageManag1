@@ -34,6 +34,7 @@ export default function AddCar({ onAdd }) {
       return;
     }
     const newCar = { ...form, id: Date.now() };
+    
     onAdd(newCar);
 
     toast.success(" Car added successfully!", {
@@ -116,8 +117,8 @@ export default function AddCar({ onAdd }) {
             onChange={(e) => setForm({ ...form, area: e.target.value })}
           >
             <option value="Center">Center</option>
-            <option value="Hartha">Hartha</option>
-            <option value="Shu Arab">Shu Arab</option>
+            <option value="Haritha">Haritha</option>
+            <option value="Shatt al-arab">Shatt al-arab</option>
           </select>
 
           {/* Status */}

@@ -17,23 +17,23 @@ export default function Services({ cars = [] }) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-300">
       {/* Hero Section */}
       <div 
-        className="relative h-96 bg-gradient-to-br from-blue-600 to-blue-800 overflow-hidden"
+        className="relative h-96 bg-gradient-to-br from-gray-600 to-gray-800 overflow-hidden"
         style={{
-          backgroundImage: 'url(/rod.jpg)',
+          backgroundImage: 'url(/rod.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'overlay'
         }}
       >
-        <div className="absolute inset-0 bg-blue-800 bg-opacity-70"></div>
+        <div className="absolute inset-0 bg-whit bg-opacity-70"></div>
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-white text-lg font-light tracking-wide mb-2 opacity-90">
+          <h1 className="text-black text-lg font-light tracking-wide mb-2 opacity-90">
             CAR GARAGE
           </h1>
-          <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight" style={{fontFamily: 'Bitter, serif'}}>
+          <h2 className="text-black text-4xl md:text-5xl font-bold leading-tight" style={{fontFamily: 'Bitter, serif'}}>
             We Provide The Best Services
           </h2>
         </div>
@@ -43,9 +43,9 @@ export default function Services({ cars = [] }) {
       <div className="relative -mt-20 z-20 px-4 mb-24">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 group">
           {/* Tire Replacement Card */}
-          <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group-hover:scale-95 group-hover:opacity-70 hover:!scale-105 hover:!opacity-100">
-            <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-              <Wrench className="w-8 h-8 text-blue-600" />
+          <div className="bg-gray-200 bg-opacity-90 backdrop-blur-sm rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group-hover:scale-95 group-hover:opacity-70 hover:!scale-105 hover:!opacity-100">
+            <div className="w-16 h-16 mx-auto mb-4 bg-whit rounded-full flex items-center justify-center">
+              <Wrench className="w-8 h-8 text-blue-900" />
             </div>
             <h3 className="text-xl font-semibold mb-4 text-gray-800">Tire Replacement</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -54,9 +54,9 @@ export default function Services({ cars = [] }) {
           </div>
 
           {/* Oil Change Card */}
-          <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group-hover:scale-95 group-hover:opacity-70 hover:!scale-105 hover:!opacity-100">
-            <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-              <Droplet className="w-8 h-8 text-blue-600" />
+          <div className="bg-gray-200 bg-opacity-90 backdrop-blur-sm rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group-hover:scale-95 group-hover:opacity-70 hover:!scale-105 hover:!opacity-100">
+            <div className="w-16 h-16 mx-auto mb-4 bg-yellow-300 rounded-full flex items-center justify-center">
+              <Droplet className="w-8 h-8 text-blue-900" />
             </div>
             <h3 className="text-xl font-semibold mb-4 text-gray-800">Oil Change</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -65,9 +65,9 @@ export default function Services({ cars = [] }) {
           </div>
 
           {/* Battery Check Card */}
-          <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group-hover:scale-95 group-hover:opacity-70 hover:!scale-105 hover:!opacity-100">
-            <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-              <Battery className="w-8 h-8 text-blue-600" />
+          <div className="bg-gray-200 bg-opacity-90 backdrop-blur-sm rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group-hover:scale-95 group-hover:opacity-70 hover:!scale-105 hover:!opacity-100">
+            <div className="w-16 h-16 mx-auto mb-4 bg-whit rounded-full flex items-center justify-center">
+              <Battery className="w-8 h-8 text-blue-900" />
             </div>
             <h3 className="text-xl font-semibold mb-4 text-gray-800">Battery Check</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -85,24 +85,24 @@ export default function Services({ cars = [] }) {
           </h2>
           <button 
             onClick={exportCSV}
-            className="px-6 py-2 bg-transparent border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 font-medium"
+            className="px-6 py-2 bg-transparent border-2 border-blue-900 text-blue-900 rounded-lg hover:bg-blue-100 hover:text-white transition-all duration-300 font-medium"
           >
             Export CSV
           </button>
         </div>
 
         {/* Customer Table */}
-        <div className="bg-gradient-to-b from-white via-purple-50 to-blue-100 rounded-lg shadow-lg overflow-hidden border border-purple-100">
+        <div className="bg-gradient-to-b from-white via-blue-50 to-blue-100 rounded-lg shadow-lg overflow-hidden border border-blue-100">
           {finished.length > 0 ? (
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gradient-to-r from-white to-purple-50 bg-opacity-90">
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">Owner</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">Model</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">Year</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">Last Service</th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">Notes</th>
+                  <tr className="bg-gradient-to-r from-white to-yellow-50 bg-opacity-90">
+                    <th className="px-4 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">Owner</th>
+                    <th className="px-2 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">Model</th>
+                    <th className="px-2 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">Year</th>
+                    <th className="px-2 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">Last Service</th>
+                    <th className="px-10 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">Notes</th>
                   </tr>
                 </thead>
                 <tbody>

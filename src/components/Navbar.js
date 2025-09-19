@@ -16,7 +16,7 @@ export default function Navbar() {
     </svg>
   );
   const navbarStyles = {
-    header: "bg-white border-b border-gray-100 sticky top-0 z-50",
+    header: "bg-white/90 border-b border-gray-100 sticky top-0 z-50",
     container: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
     wrapper: "flex justify-between items-center h-16",
     
@@ -53,7 +53,7 @@ export default function Navbar() {
           {/* Brand Section - Left */}
           <div className={navbarStyles.brand}>
             <img 
-              src="/ie.png" 
+              src="/ie.webp" 
               alt="Logo" 
               className={navbarStyles.logo}
             />
