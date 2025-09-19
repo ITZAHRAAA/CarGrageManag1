@@ -9,6 +9,7 @@ module.exports = {
         asimovian: ["'Asimovian'", "sans-serif"],
         bitter: ["Bitter", "serif"],
 
+
       },
     },
   },
