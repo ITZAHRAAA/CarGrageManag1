@@ -70,7 +70,7 @@ export default function Home({ cars = [] }) {
           {/* Stats Cards - Moved to right side */}
           <div className="absolute top-8 right-0 space-y-2 w-30">
             {/* Total Cars Card */}
-            <div className="bg-white/90 border-2 border-white rounded-full py-1 px-2">
+            <div className="bg-gray-100 border-2 border-gray-500 rounded-full py-1 px-2">
               <div className="flex items-center space-x-4">
                 <TruckIcon className="w-6 h-6 text-black" />
                 <div>
@@ -82,7 +82,7 @@ export default function Home({ cars = [] }) {
 
             {/* Ready and In Repair Cards */}
             <div className="space-y-2">
-              <div className="bg-transparent border-2 border-whit rounded-full py-1 px-2">
+              <div className="bg-gray-200 border-2 border-gray-500 rounded-full py-1 px-2">
                 <div className="flex items-center space-x-4">
                   <CheckCircleIcon className="w-4 h-4 text-black" />
                   <div>
@@ -92,7 +92,7 @@ export default function Home({ cars = [] }) {
                 </div>
               </div>
               
-              <div className="bg-transparent border-2 border-whit rounded-full py-1 px-4">
+              <div className="bg-gray-300 border-2 border-gray-500 rounded-full py-1 px-4">
                 <div className="flex items-center space-x-4">
                   <WrenchScrewdriverIcon className="w-4 h-4 text-black" />
                   <div>
