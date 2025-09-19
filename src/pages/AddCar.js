@@ -102,7 +102,7 @@ export default function AddCar({ onAdd }) {
             <FaMapMarkerAlt className="text-blue-600 text-3xl mb-2 mx-auto" />
             <h4 className="text-2xl font-bold mb-2">Contact Details</h4>
             <p>Address: Iraq – Basra</p>
-            <p>Phone: +964-780-123-4567</p>
+            <p>Phone: +9647801234567</p>
             <p>Email: garage@example.com</p>
           </div>
           <div className="bg-gray-50 p-6 rounded-xl shadow-lg transform transition duration-700 hover:scale-105">

@@ -87,7 +87,7 @@ export default function Services({ cars = [] }) {
             onClick={exportCSV}
             className="px-6 py-2 bg-transparent border-2 border-blue-900 text-blue-900 rounded-lg hover:bg-blue-100 hover:text-white transition-all duration-300 font-medium"
           >
-            Export CSV
+            Export
           </button>
         </div>
 

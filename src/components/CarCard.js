@@ -1,59 +1,61 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 export default function CarCard({ car, onToggleStatus, onDelete }) {
   const nav = useNavigate();
   const isReady = car.status === "Ready" || car.status === "جاهزة";
 
-  const handleToggleStatus = () => {
-    const newStatus = isReady ? "In Repair" : "Ready";
-    onToggleStatus(car.id);
-
-    const toastColor = newStatus === "Ready" ? "#22c55e" : "#f97316";
-    const toastText = `Car "${car.model}" status changed to ${newStatus}!`;
-
-    toast(toastText, {
-      position: "top-center",
-      autoClose: 3000,
-      style: {
-        backgroundColor: toastColor,
-        color: "white",
-        fontWeight: "bold",
-      },
-    });
-  };
-
   return (
-    <article className="card">
-      <div className="top">
+    <article className="p-6 rounded-2xl bg-white/40 backdrop-blur-lg shadow-lg hover:scale-105 transform transition duration-300 flex flex-col gap-3">
+      {/* Header */}
+      <div className="flex justify-between items-center">
         <div>
-          <div style={{ fontSize: 14, color: "#444", fontWeight: 700 }}>{car.owner}</div>
-          <div className="meta">{car.model} • {car.year}</div>
+          <div className="text-sm text-gray-900 font-bold">{car.owner}</div>
+          <div className="text-xs text-gray-600">{car.model} • {car.year}</div>
         </div>
-        <div style={{ textAlign: "right" }}>
-          <div style={{ fontSize: 12, color: "#888" }}>Last: {car.lastService || "-"}</div>
+        <div className="text-right">
+          <div className="text-xs text-gray-600">Last: {car.lastService || "-"}</div>
         </div>
       </div>
 
-      <div className="model">{car.model}</div>
+      {/* Model */}
+      <div className="text-xl font-bold text-center text-gray-900">{car.model}</div>
 
-      <div>
-        <span className={`badge ${isReady ? "ready" : "repair"}`}>
+      {/* Status */}
+      <div className="flex justify-center">
+        <span
+          className={`px-3 py-1 rounded-full text-sm font-semibold 
+            ${isReady ? "bg-green-200 text-green-700 border border-green-500" : "bg-orange-200 text-orange-700 border border-orange-500"}`}
+        >
           {isReady ? "Ready" : "In Repair"}
         </span>
       </div>
 
-      <div className="btn-row">
-        <button className="btn outline" onClick={() => nav(`/edit/${car.id}`)}>Edit</button>
-        <button className="btn primary" onClick={handleToggleStatus}>
+      {/* Buttons */}
+      <div className="mt-3 flex gap-2 justify-center">
+        <button
+          className="px-3 py-1 rounded-lg text-sm font-semibold text-blue-600 border-2 border-blue-500 hover:bg-blue-100 transition"
+          onClick={() => nav(`/edit/${car.id}`)}
+        >
+          Edit
+        </button>
+        <button
+          className={`px-3 py-1 rounded-lg text-sm font-semibold border-2 transition
+            ${isReady
+              ? "border-orange-500 text-orange-600 hover:bg-orange-100"
+              : "border-green-500 text-green-600 hover:bg-green-100"
+            }`}
+          onClick={() => onToggleStatus(car.id)}
+        >
           {isReady ? "Mark In Repair" : "Mark Ready"}
         </button>
-        <button className="btn danger" onClick={() => onDelete(car.id)}>Delete</button>
+        <button
+          className="px-3 py-1 rounded-lg text-sm font-semibold text-red-600 border-2 border-red-500 hover:bg-red-100 transition"
+          onClick={() => onDelete(car.id)}
+        >
+          Delete
+        </button>
       </div>
-
-      <ToastContainer />
     </article>
   );
 }
