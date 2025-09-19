@@ -8,7 +8,7 @@ module.exports = {
         orbitron: ["'Orbitron'", "sans-serif"],
         asimovian: ["'Asimovian'", "sans-serif"],
         bitter: ["Bitter", "serif"],
-
+        exo: ["Exo", "sans-serif"]
       },
     },
   },

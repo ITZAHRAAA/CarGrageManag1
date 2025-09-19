@@ -72,7 +72,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
+      {/* 🚀 مرّر cars للNavbar ليحسب readyCount */}
+      <Navbar cars={cars} />
+
       <div className="app-content p-6">
         <Routes>
           <Route path="/" element={<Home cars={cars} />} />
