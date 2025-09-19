@@ -10,12 +10,14 @@ export default function Cars({ cars, onToggleStatus, onDelete, onEdit }) {
         c.owner.toLowerCase().includes(q.toLowerCase()) ||
         c.model.toLowerCase().includes(q.toLowerCase()) ||
         (c.area && c.area.toLowerCase().includes(q.toLowerCase()));
+
       const matchesFilter =
         filter === "all"
           ? true
           : filter === "ready"
           ? c.status === "Ready" || c.status === "جاهزة"
           : c.status === "In Repair" || c.status === "صيانة";
+
       return matchesQ && matchesFilter;
     });
   }, [cars, q, filter]);
@@ -44,8 +46,10 @@ export default function Cars({ cars, onToggleStatus, onDelete, onEdit }) {
       {/* Cars Grid */}
       <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {filtered.length === 0 ? (
-          <div className="p-6 rounded-2xl bg-white/20 backdrop-blur-md text-center">
-            No cars found.
+          <div className="col-span-full flex justify-center items-center h-64">
+            <div className="p-6 rounded-2xl bg-white/20 backdrop-blur-md text-center text-gray-800">
+              No cars found.
+            </div>
           </div>
         ) : (
           filtered.map(car => (
@@ -53,20 +57,20 @@ export default function Cars({ cars, onToggleStatus, onDelete, onEdit }) {
               key={car.id}
               className="p-6 rounded-2xl bg-white/20 backdrop-blur-md shadow-lg flex flex-col gap-3 hover:scale-105 transform transition duration-300"
             >
-              <h3 className="text-lg font-bold">{car.model}</h3>
-              <p className="text-gray-800">Owner: {car.owner}</p>
-              <p className="text-gray-800">Year: {car.year}</p>
-              <p className="text-gray-800">Area: {car.area}</p>
-              <p className="text-gray-800">Status: {car.status}</p>
+              <h3 className="text-lg font-bold text-center">{car.model}</h3>
+              <p className="text-gray-800 text-center">Owner: {car.owner}</p>
+              <p className="text-gray-800 text-center">Year: {car.year}</p>
+              <p className="text-gray-800 text-center">Area: {car.area}</p>
+              <p className="text-gray-800 text-center">Status: {car.status}</p>
 
-              {/* ✅ خدمة الصيانة */}
+              {/* Service */}
               {car.lastService && (
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-center">
                   <span className="font-semibold">Last Service:</span> {car.lastService}
                 </p>
               )}
               {car.nextService && (
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-center">
                   <span className="font-semibold">Next Service:</span> {car.nextService}
                 </p>
               )}
