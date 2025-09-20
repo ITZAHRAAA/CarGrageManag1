@@ -72,13 +72,18 @@ export default function Reports({ cars }) {
             <div className="h-40 relative">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={barData}>
+                  <defs>
+                     <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
+                     <stop offset="0%" stopColor="#0d3575ff" />   {/* أعلى: أزرق */}
+                     <stop offset="100%" stopColor="#a5b2ceff" /> {/* أسفل: أبيض */}
+                     </linearGradient>
+                     </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
                   <XAxis dataKey="year" tick={{ fill: '#6b7280', fontSize: 12 }} />
                   <YAxis tick={{ fill: '#6b7280', fontSize: 12 }} />
-                  <Bar dataKey="count" radius={[6, 6, 0, 0]}>
-                    {barData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill="#0d254bff" />
-                    ))}
+                  <Bar dataKey="count" radius={[6, 6, 0, 0]}fill="url(#grad1)">
+
+                    
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
