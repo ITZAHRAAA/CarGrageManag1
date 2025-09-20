@@ -71,7 +71,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen w-full bg-gradient-to-b from-gray-200 to-gray-800">
       {/* 🚀 مرّر cars للNavbar ليحسب readyCount */}
       <Navbar cars={cars} />
 

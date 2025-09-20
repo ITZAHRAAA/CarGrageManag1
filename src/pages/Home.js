@@ -58,7 +58,7 @@ export default function Home({ cars = [] }) {
                 backgroundImage: 'url(/hx.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                opacity: 0.1,
+                opacity: 0.2,
               }}
             />
 
